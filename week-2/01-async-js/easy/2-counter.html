@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter with setTimeout</title>
+</head>
+<body>
+
+<h1 id="counter">0</h1>
+
+<script>
+  // Initialize counter
+  let count = 0;
+
+  // Function to update the counter
+  function updateCounter() {
+    // Get the counter element
+    const counterElement = document.getElementById('counter');
+
+    // Update the counter value
+    counterElement.textContent = count;
+
+    // Increment the counter
+    count++;
+
+    // Set a timeout to call the function again after 1000 milliseconds (1 second)
+    setTimeout(updateCounter, 1000);
+  }
+
+  // Start the counter
+  updateCounter();
+</script>
+
+</body>
+</html>
